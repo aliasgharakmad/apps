@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services - 3A Digital Solution</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+  <script>
+	  const header = document.querySelector("header");
+	  window.addEventListener("scroll", () => {
+		if (window.scrollY > 50) {
+		  header.classList.add("shrink");
+		} else {
+		  header.classList.remove("shrink");
+		}
+	  });
+	</script>
+    <img src="assets/logo.png" alt="3A Logo" class="logo" />
+    <nav class="navbar">
+	  <div class="nav-toggle" id="navToggle">☰</div>
+	  <ul class="nav-links" id="navLinks">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="products.html">Products</a></li>
+	  </ul>
+	</nav>
+  </header>
+
+  <section>
+    <h2>Our Services</h2>
+    <div class="cards">
+      <div class="card service-card fade-in">
+        <h3>📱 Mobile App Development</h3>
+        <p>Build sleek, scalable mobile apps for iOS and Android with performance and UX in mind.</p>
+      </div>
+      <div class="card service-card fade-in">
+        <h3>💻 Web App Development</h3>
+        <p>Deploy responsive, secure web applications tailored to your business goals and user needs.</p>
+      </div>
+      <div class="card service-card fade-in">
+        <h3>🎨 Digital Arts & Graphics</h3>
+        <p>Design stunning visuals, logos, and branding assets that elevate your digital presence.</p>
+      </div>
+      <div class="card service-card fade-in">
+        <h3>🧠 UI/UX Mobile & Web Design</h3>
+        <p>Craft intuitive interfaces and user journeys that delight and convert across platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 3A Digital Solution</p>
+      <p>📧 <a href="mailto:contact@threeadigitalsolution.com">contact@threeadigitalsolution.com</a></p>
+      <p>🌐 <a href="https://www.threeadigitalsolution.com" target="_blank">Visit Our Website</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/3a-digital-solution" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/threeadigitalsolution" target="_blank">💻 GitHub</a>
+        <a href="https://facebook.com/threeadigitalsolution" target="_blank">📘 Facebook</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+	  const navToggle = document.getElementById("navToggle");
+	  const navLinks = document.getElementById("navLinks");
+
+	  navToggle.addEventListener("click", () => {
+		navLinks.classList.toggle("show");
+	  });
+	</script>
+  <script>
+	  const faders = document.querySelectorAll('.fade-in');
+	  const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+	  const appearOnScroll = new IntersectionObserver((entries, observer) => {
+		entries.forEach(entry => {
+		  if (!entry.isIntersecting) return;
+		  entry.target.classList.add('visible');
+		  observer.unobserve(entry.target);
+		});
+	  }, appearOptions);
+	  faders.forEach(fader => appearOnScroll.observe(fader));
+	</script>
+
+</body>
+</html>

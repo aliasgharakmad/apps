@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - 3A Digital Solution</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+</head>
+<body>
+  <header>
+  <script>
+	  const header = document.querySelector("header");
+	  window.addEventListener("scroll", () => {
+		if (window.scrollY > 50) {
+		  header.classList.add("shrink");
+		} else {
+		  header.classList.remove("shrink");
+		}
+	  });
+	</script>
+    <img src="assets/logo.png" alt="3A Logo" class="logo" />
+    <nav class="navbar">
+	  <div class="nav-toggle" id="navToggle">☰</div>
+	  <ul class="nav-links" id="navLinks">
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="services.html">Services</a></li>
+		<li><a href="products.html">Products</a></li>
+	  </ul>
+	</nav>
+  </header>
+
+  <section>
+	  <h2>About Us</h2>
+	  <p>
+		At <strong>3A Digital Solution</strong>, we specialize in building resilient, scalable digital products that empower businesses and creators alike. Our team combines technical precision with bold design to deliver solutions that are not only functional—but unforgettable.
+	  </p>
+
+	  <h3>🚀 What We Build</h3>
+	  <ul class="cards">
+		<li>🏸 <strong>Badminton Buddy</strong> – A real-time match tracker with player stats, rankings, and performance analytics.</li>
+		<li>⚙️ <strong>API Query Optimizer</strong> – A smart REST filtering engine for Firebase and other platforms, built for speed and clarity.</li>
+		<li>📱 <strong>Mobile Apps</strong> – From concept to deployment, we craft native and cross-platform apps for iOS and Android.</li>
+		<li>💻 <strong>Web Applications</strong> – Scalable, secure, and responsive web apps tailored to your business goals.</li>
+	  </ul>
+
+	  <h3>🛠️ What We Offer</h3>
+	  <ul class="cards">
+		<li>🌐 Custom Domain Setup & DNS Configuration</li>
+		<li>🔐 Access Control & Firebase Security Rules</li>
+		<li>🎨 Digital Arts & Graphics for branding and marketing</li>
+		<li>🧠 UI/UX Design for mobile and web platforms</li>
+		<li>📊 Firebase Optimization & Realtime Database Indexing</li>
+		<li>⚡ REST API Filtering & Query Performance Tuning</li>
+	  </ul>
+
+	  <p>
+		Whether you're launching a new product, refining your backend logic, or elevating your brand identity—we're here to collaborate, validate, and build with you. Every pixel and every query matters.
+	  </p>
+	</section>
+
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 3A Digital Solution</p>
+      <p>📧 <a href="mailto:contact@threeadigitalsolution.com">contact@threeadigitalsolution.com</a></p>
+      <p>🌐 <a href="https://www.threeadigitalsolution.com" target="_blank">Visit Our Website</a></p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/company/3a-digital-solution" target="_blank">🔗 LinkedIn</a>
+        <a href="https://github.com/threeadigitalsolution" target="_blank">💻 GitHub</a>
+        <a href="https://facebook.com/threeadigitalsolution" target="_blank">📘 Facebook</a>
+      </div>
+    </div>
+  </footer>
+  <script>
+	  const navToggle = document.getElementById("navToggle");
+	  const navLinks = document.getElementById("navLinks");
+
+	  navToggle.addEventListener("click", () => {
+		navLinks.classList.toggle("show");
+	  });
+	</script>
+</body>
+</html>
