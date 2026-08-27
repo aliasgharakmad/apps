@@ -5,77 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - 3A Digital Solution</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
 </head>
 <body>
-  <header>
-  <script>
-	  const header = document.querySelector("header");
-	  window.addEventListener("scroll", () => {
-		if (window.scrollY > 50) {
-		  header.classList.add("shrink");
-		} else {
-		  header.classList.remove("shrink");
-		}
-	  });
-	</script>
+  
+  <header id="siteHeader">
     <img src="assets/logo.png" alt="3A Logo" class="logo" />
     <nav class="navbar">
-	  <div class="nav-toggle" id="navToggle">☰</div>
-	  <ul class="nav-links" id="navLinks">
-		<li><a href="index.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="services.html">Services</a></li>
-		<li><a href="products.html">Products</a></li>
-	  </ul>
-	</nav>
+      <div class="nav-toggle" id="navToggle">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section>
-  <h2>Our Products</h2>
-	  <div class="cards">
-		<div class="card service-card fade-in">
-		  <h3>🏸 Badminton Buddy</h3>
-		  <p>Track matches, stats, and player rankings in real-time.</p>
-		  <a href="https://www.threeadigitalsolution.com/badmintonbuddy/index.html" class="btn" target="_blank">Learn More</a>
-		</div>
-		<div class="card service-card fade-in">
-		  <h3>⚙️ API Query Optimizer</h3>
-		  <p>Boost performance with smart REST filtering and indexing for Firebase and other platforms.</p>
-		</div>
-	  </div>
-	</section>
+    <h2>Our Products</h2>
+    <div class="cards">
+      <!-- Product 1: Badminton Buddy -->
+      <div class="card service-card fade-in">
+        <h3>🏸 Badminton Buddy</h3>
+        <p>Track matches, stats, and player rankings in real-time.</p>
+        <a href="https://www.threeadigitalsolution.com/badmintonbuddy/index.html" class="btn" target="_blank">Learn More</a>
+      </div>
 
+      <!-- Product 2: Schedretary (Newly Added) -->
+      <div class="card service-card fade-in" id="schedretary">
+        <h3>📅 Schedretary</h3>
+        <p>Take control of your business calendar. Manage slots, track client check-ins, and sync schedules instantly.</p>
+        <a href="https://www.threeadigitalsolution.com/schedretary/index.html" class="btn" target="_blank">Learn More</a>
+      </div>
 
+      <!-- Product 3: API Query Optimizer -->
+      <div class="card service-card fade-in">
+        <h3>⚙️ API Query Optimizer</h3>
+        <p>Boost performance with smart REST filtering and indexing for Firebase and other platforms.</p>
+      </div>
+    </div>
+  </section>
 
   <footer>
-	  <div class="footer-content">
-		<p>&copy; 2025 3A Digital Solution</p>
-	  </div>
-	</footer>
-	
-	<script>
-	  const navToggle = document.getElementById("navToggle");
-	  const navLinks = document.getElementById("navLinks");
-
-	  navToggle.addEventListener("click", () => {
-		navLinks.classList.toggle("show");
-	  });
-	</script>
-
+    <div class="footer-content">
+      <p>&copy; 2026 3A Digital Solution</p>
+    </div>
+  </footer>
+  
+  <!-- Interactive Navigation & Scrolling Effects Scripts -->
   <script>
-	  const faders = document.querySelectorAll('.fade-in');
-	  const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
-	  const appearOnScroll = new IntersectionObserver((entries, observer) => {
-		entries.forEach(entry => {
-		  if (!entry.isIntersecting) return;
-		  entry.target.classList.add('visible');
-		  observer.unobserve(entry.target);
-		});
-	  }, appearOptions);
-	  faders.forEach(fader => appearOnScroll.observe(fader));
-	</script>
+    // Header scroll contraction mapping
+    const headerEl = document.getElementById("siteHeader");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        headerEl.classList.add("shrink");
+      } else {
+        headerEl.classList.remove("shrink");
+      }
+    });
+
+    // Mobile Navbar toggle interaction
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+
+    // Intersection scroll fade-in setup
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
 </body>
 </html>
-
-
