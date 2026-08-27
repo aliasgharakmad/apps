@@ -1,0 +1,480 @@
+:root {
+  /* Oxford Theme Integration Mapping */
+  --primary-color: #334155;
+  --primary-hover: #1e293b;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --bg-white: #ffffff;
+  --bg-light: #f1f5f9;
+  --border-color: #e2e8f0;
+  
+  /* Soft Shadows and Accent Glows matched to Oxford colors */
+  --accent-glow: rgba(100, 116, 139, 0.12);
+  --card-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.03), 0 2px 4px -1px rgba(15, 23, 42, 0.02);
+  --card-shadow-hover: 0 20px 25px -5px rgba(51, 65, 85, 0.08), 0 10px 10px -5px rgba(51, 65, 85, 0.04);
+  
+  /* System Animations */
+  --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Base Body Setup */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-main);
+  background-color: var(--bg-white);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* Header & Navigation Styling */
+.banner {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.5rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.02);
+}
+
+.banner-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .banner-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.banner-brand-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.banner-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.banner-title-block h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  letter-spacing: -0.03em;
+}
+
+.banner-title-block p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .banner-title-block p {
+    display: block;
+  }
+}
+
+/* Oxford Navigation Links */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+nav a:hover {
+  color: var(--text-main);
+  background-color: var(--bg-light);
+}
+
+nav a.active {
+  background-color: var(--primary-color);
+  color: var(--bg-white) !important;
+  box-shadow: 0 2px 8px rgba(51, 65, 85, 0.15);
+}
+
+/* Main Layout Wrapper */
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+/* Hero Presentation Components */
+.hero {
+  text-align: center;
+  margin-bottom: 4rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto 1.5rem auto;
+  font-weight: 400;
+}
+
+.effective-date {
+  font-size: 0.95rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  background-color: var(--bg-light);
+  padding: 0.35rem 1rem;
+  border-radius: 6px;
+  display: inline-block;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+/* App Download Badges Alignment */
+.download-badge-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.download-badge img {
+  height: 64px;
+  transition: var(--transition-smooth);
+  filter: drop-shadow(0 2px 8px rgba(15, 23, 42, 0.06));
+}
+
+.download-badge img:hover {
+  transform: translateY(-2px);
+  filter: drop-shadow(0 10px 15px rgba(15, 23, 42, 0.12));
+}
+
+/* Dashboard Feature Cards Container */
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.75rem;
+}
+
+.feature-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  box-shadow: var(--card-shadow);
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--text-muted);
+  opacity: 0;
+  transition: var(--transition-smooth);
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: var(--text-muted);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card strong {
+  display: block;
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Legal Documents & Nested Content Blocks */
+.policy-text h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 3.5rem 0 1.25rem 0;
+  letter-spacing: -0.02em;
+}
+
+.policy-text p {
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.policy-text ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+
+.policy-text li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.policy-text li::before {
+  content: "■";
+  position: absolute;
+  left: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  top: 2px;
+}
+
+.policy-text strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* Contact Card Formatting */
+.contact-section {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: var(--card-shadow);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-main);
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  background-color: var(--bg-white);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px var(--accent-glow);
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: var(--bg-white);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 2rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 2px 4px rgba(51, 65, 85, 0.1);
+}
+
+.submit-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(51, 65, 85, 0.2);
+}
+
+/* Team & QA Showcases Grid Layouts */
+.team-section {
+  margin-top: 6rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 3rem;
+  letter-spacing: -0.03em;
+  color: var(--primary-color);
+}
+
+.section-subheading {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 4.5rem 0 2.5rem 0;
+  color: var(--primary-color);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition-smooth);
+  box-shadow: var(--card-shadow);
+}
+
+.team-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.02);
+  border-color: var(--text-muted);
+}
+
+.team-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.team-card p {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.qa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.qa-group-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+}
+
+.qa-group-card h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.qa-group-card li {
+  font-size: 1rem;
+  color: var(--text-muted);
+  padding: 0.45rem 0;
+  border-bottom: 1px dashed rgba(226, 232, 240, 0.5);
+  font-weight: 500;
+}
+
+.qa-group-card li:last-child {
+  border-bottom: none;
+}
+
+/* Inline Address Information Box */
+.contact-block {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Footnotes & Footer Structuring */
+footer {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-light);
+  padding: 3rem 1rem;
+  text-align: center;
+  margin-top: 6rem;
+}
+
+footer p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Subtle Structural Entry Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
