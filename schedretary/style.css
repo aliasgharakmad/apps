@@ -171,7 +171,6 @@ main {
 .download-badge-container {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
 }
 
 .download-badge img {
@@ -364,6 +363,7 @@ main {
   margin-bottom: 3rem;
   letter-spacing: -0.03em;
   color: var(--primary-color);
+ 
 }
 
 .section-subheading {
