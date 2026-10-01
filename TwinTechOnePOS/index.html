@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TWINTECH OnePOS</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="storage.js"></script>
+  <script defer src="image-catalog.js"></script>
+  <script defer src="camera.js"></script>
+  <!-- CLEANUP:MIGRATION — One-time assignment to existing browser products. -->
+  <script defer src="assign-product-images.js"></script>
+  <script defer src="register.js"></script>
+  <script defer src="refunds.js"></script>
+  <script defer src="promos.js"></script>
+  <script defer src="vouchers.js"></script>
+  <script defer src="qr.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-brand"><strong>TWINTECH OnePOS</strong><small id="store-label">Local POS</small><small id="store-address" class="header-address" hidden></small><small id="cashier-label" class="header-cashier"></small></div>
+    <nav aria-label="Main navigation">
+      <button data-view="pos">New sale</button><button data-view="products">Products</button><button data-view="inventory">Inventory</button><button data-view="customers">Customers</button><button data-view="vouchers">Promo vouchers</button><button data-view="history">Sales history</button><button data-view="reports">Reports</button><button data-view="register">Register</button><button data-view="settings">Settings</button>
+    </nav>
+    <span id="register-status" class="badge" role="status" aria-live="polite">Register Closed</span>
+  </header>
+  <p id="notice" role="status" hidden></p>
+  <main id="content"></main>
+  <dialog id="dialog"><div id="dialog-content"></div><div id="dialog-actions" class="dialog-actions"><button class="secondary" id="dismiss-dialog" type="button">Close</button></div></dialog>
+</body>
+</html>
+
+
