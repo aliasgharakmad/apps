@@ -9,80 +9,220 @@
 </head>
 <body>
   <header class="banner">
-  <img src="logo.jpeg" alt="Badminton Buddy Banner" class="banner-img" />
-  <div class="banner-text">
-    <h1>🏸 Badminton Buddy</h1>
-    <p>Your smart companion for organizing badminton games.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="features.html">Features</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="contact.html">Contact</a>
-      <a href="terms.html">Terms of use</a>
-    </nav>
-  </div>
-</header>
+    <img src="logo.jpeg" alt="Badminton Buddy Banner" class="banner-img" />
+    <div class="banner-text">
+      <h1>🏸 Badminton Buddy</h1>
+      <p>Your smart companion for organizing badminton games.</p>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="features.html">Features</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms of use</a>
+      </nav>
+    </div>
+  </header>
 
+  <main>
+    <section class="hero">
+      <h2>Privacy Policy</h2>
+      <p>Effective Date: October 23, 2026</p>
+      <p>
+        Badminton Buddy (“we,” “our,” or “us”) is committed to protecting your
+        privacy and being transparent about how your information is handled.
+        This policy explains what information is collected and how it is used
+        when you use the Badminton Buddy mobile application.
+      </p>
+    </section>
 
-	<main>
-	  <section class="hero">
-		<h2>Privacy Policy</h2>
-		<p>Effective Date: September 19, 2025</p>
-		<p>Badminton Buddy ("we", "our" or "use") is committed to protecting your privacy and ensuring transparency in how your data is handled.</p>
-		<p>This Privacy Policy outlines the types of information we collect, how we use it, and the measures we take to safeguard it when you use our mobile application.</p>
+    <section class="policy-text">
+      <h3>1. Information We Collect</h3>
+      <p>
+        Depending on the features you use, we may collect information you
+        provide, information created while using the app, and limited device or
+        service information needed to operate and secure the app.
+      </p>
+      <ul>
+        <li>
+          <strong>Account and support information:</strong> Firebase account
+          identifier, email address and verification status, support category
+          and message, and a device or session identifier used to enforce
+          single-device sign-in.
+        </li>
+        <li>
+          <strong>Queue Master information:</strong> Player names and aliases,
+          optional contact details, profile preferences, avatar selections,
+          player rank, queue and court details, match records, participation,
+          timestamps, game durations, and win/loss statistics.
+        </li>
+        <li>
+          <strong>Tournament information:</strong> Tournament name, venue, date
+          and description; event formats and categories; registered player
+          names, ages, genders and ranks; court and umpire assignments; match
+          schedules, scores, outcomes, standings, and result-review records.
+        </li>
+        <li>
+          <strong>Purchase and subscription information:</strong> Product and
+          plan identifiers, purchase verification data, access entitlements,
+          subscription state, renewal status, and start or expiration dates.
+          Purchase tokens are sent to our server for verification. Google Play
+          processes payments; we do not receive or store your payment-card or
+          bank-account details.
+        </li>
+        <li>
+          <strong>Device and advertising information:</strong> App version,
+          device type, diagnostic information, and advertising identifiers or
+          ad interaction information processed by Google AdMob and related
+          platform services.
+        </li>
+      </ul>
 
-	  </section>
+      <h3>2. How We Use Your Data</h3>
+      <ul>
+        <li>
+          Provide Queue Master and Tournament Master features, including
+          queues, player records, events, match schedules, scoring, standings,
+          umpire review, and public tournament viewing when enabled by the
+          tournament owner.
+        </li>
+        <li>
+          Display statistics, performance summaries, game history, and
+          participation-based court or shuttle cost calculations.
+        </li>
+        <li>
+          Authenticate accounts, maintain the single-device session,
+          synchronize eligible records, verify purchases, provide support, and
+          protect the service from misuse.
+        </li>
+        <li>Serve ads and administer optional rewarded-ad features for eligible accounts.</li>
+      </ul>
 
-	  <section class="policy-text">
-		<h3>1. Information We Collect</h3>
-		<ul>
-		  <li><strong>Player Information:</strong> Full names, nicknames, optional contact details (e.g., email address), profile preferences, and avatar selections (if applicable)</li>
-		  <li><strong>Game History:</strong> Match records, player participation, queue data, timestamps, court assignments, game durations, and win/loss statistics</li>
-		  <li><strong>Payment Data:</strong> Participation-based calculations for shared costs. <em>Note: We do not store credit card numbers, banking details, or process actual financial transactions.</em></li>
-		  <li><strong>Device & Usage Data (non-personal):</strong> App version, device type, crash logs, and anonymized usage metrics collected via third-party tools for performance optimization</li>
-		</ul>
+      <h3>3. Data Storage and Security</h3>
+      <p>
+        Guest records are stored only on the device, are not synchronized to
+        our server, and are cleared when guest access is exited or at the next
+        4 a.m. cleanup. For signed-in accounts, records are saved locally first
+        and eligible changes are synchronized with Firebase Realtime Database.
+      </p>
+      <p>
+        Free accounts can synchronize Queue Master operational records. Queue
+        Master game history, player history, and temporary or ad-capped reward
+        data may remain local. Tournament records may synchronize for signed-in
+        free and paid accounts. Guest tournament data remains local. Available
+        features and limits depend on the account plan.
+      </p>
+      <p>
+        When you sign out, the app tries to synchronize records eligible for
+        your account’s current access plan before clearing local account
+        records. If an eligible synchronization fails, sign-out is stopped and
+        local records are retained. Records excluded from synchronization, such
+        as free Queue Master game and player history, may not be on the server
+        and are removed from the device when local account data is cleared.
+        Signing out does not delete records stored in Firebase.
+      </p>
+      <p>
+        We use reasonable administrative and technical safeguards, including
+        secure network connections and access controls, to protect information.
+        No method of storage or transmission can be guaranteed to be completely
+        secure.
+      </p>
 
-		<h3>2. How We Use Your Data</h3>
-		<ul>
-		  <li>Manage player queues, match scheduling, and game history</li>
-		  <li>Display personalized statistics, performance summaries, and game logs</li>
-		  <li>Calculate and display suggested payment splits based on participation</li>
-		  <li>Improve app stability, detect bugs, and enhance future features</li>
-		</ul>
+      <h3>4. Data Sharing</h3>
+      <p>
+        We do not sell or rent personal data. We share data with service
+        providers as needed to operate the app: Google Firebase provides
+        authentication, database synchronization, and server functions; Google
+        Play processes purchases and subscriptions; and Google AdMob serves ads
+        to eligible users. These providers process data under their own privacy
+        policies.
+      </p>
+      <p>
+        If a tournament owner publishes a tournament, people with its active
+        viewing code can view the information included in the public view. This
+        may include the tournament name, venue, date and description; event
+        categories; player or team names; match schedules, scores, outcomes and
+        winners; court names; and standings. The owner can turn off sharing.
+        Information viewers copied or saved while the tournament was published
+        may remain outside our control.
+      </p>
+      <p>
+        A tournament owner may assign an umpire to a match. The umpire receives
+        the match information needed to score it and submit a result for review.
+        Tournament owners are responsible for having an appropriate basis and
+        permission to enter and share information about other players and
+        umpires.
+      </p>
 
-		<h3>3. Data Security</h3>
-		<p>We implement reasonable administrative, technical, and physical safeguards to protect your data. All personal data is stored locally on your device or securely within the app’s environment. Sensitive operations are protected by secure protocols and access controls. We do not transmit personal data to external servers unless explicitly required for app functionality.</p>
+      <h3>5. Your Choices and Data Requests</h3>
+      <ul>
+        <li>
+          You may request access to or correction of your personal information,
+          or request its deletion or blocking, by choosing “Delete my account
+          and all my data” in Contact Us or by emailing
+          <a href="mailto:ali.asghar.akmad@gmail.com">ali.asghar.akmad@gmail.com</a>.
+          We may ask you to verify your identity before acting on a request.
+        </li>
+        <li>
+          We retain signed-in account records while needed to provide the
+          service and until a verified deletion request is completed, except
+          for limited records we must retain for legal, security, accounting,
+          or dispute-resolution purposes. Support requests are retained while
+          needed to respond and maintain a record of the request. Guest data is
+          cleared on exit or at the next 4 a.m. cleanup.
+        </li>
+        <li>
+          Where applicable, you may object to processing or withdraw consent,
+          and you may lodge a complaint with the relevant privacy regulator.
+          Some records may remain necessary to provide a feature you use or to
+          meet legal obligations.
+        </li>
+        <li>
+          You can manage advertising preferences through the settings available
+          on your device and Google account.
+        </li>
+      </ul>
 
-		<h3>4. Data Sharing</h3>
-		<p>We do not sell, rent, or share your personal data with third parties. Your information remains within the app and is used exclusively to support your experience. Third-party tools (e.g., analytics or crash reporting) may collect non-personal data to help us improve performance. These tools operate under strict privacy agreements and do not access identifiable user information.</p>
+      <h3>6. Third-Party Services</h3>
+      <p>
+        The app uses Firebase services, Google Play Billing and related
+        purchase-verification services, and Google AdMob for app operations,
+        purchase processing, and advertising. Each service is governed by its
+        own privacy policy and terms.
+      </p>
 
-		<h3>5. User Control & Data Rights</h3>
-		<ul>
-		  <li><strong>Delete or Reset Profile:</strong> You may delete your data or reset your profile at any time via app settings</li>
-		  <li><strong>Data Requests:</strong> You may request access, correction, or deletion of your data by contacting us</li>
-		  <li><strong>Consent Management:</strong> You may opt out of non-essential data collection (e.g., analytics) via app settings</li>
-		</ul>
+      <h3>7. Children’s Privacy</h3>
+      <p>
+        Badminton Buddy accounts are not intended for children under 13.
+        Tournament organizers may enter information about youth participants,
+        including age, as needed to administer an event. Organizers are
+        responsible for providing any required notice and obtaining any
+        required permission from a parent or guardian. Contact us if you
+        believe information has been submitted inappropriately.
+      </p>
 
-		<h3>6. Third-Party Services</h3>
-		<p>Badminton Buddy may integrate third-party services for analytics and crash reporting. These services collect non-personal data only and are governed by their own privacy policies.</p>
+      <h3>8. Changes to This Policy</h3>
+      <p>
+        We may update this Privacy Policy from time to time. Changes will be
+        reflected with a revised effective date and communicated through
+        in-app notices or update logs where appropriate.
+      </p>
 
-		<h3>7. Children’s Privacy</h3>
-		<p>Badminton Buddy is not intended for children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us immediately.</p>
-
-		<h3>8. Changes to This Policy</h3>
-		<p>We may update this Privacy Policy from time to time. Changes will be reflected with a revised “Effective Date” and communicated via in-app notifications or update logs.</p>
-
-		<h3>9. Contact Us</h3>
-		<p>If you have questions, concerns, or requests regarding this Privacy Policy, please contact:</p>
-		<p><strong>Email:</strong> ali.asghar.akmad@gmail.com<br />
-		   <strong>Developer Name:</strong> Ali Asghar Akmad</p>
-	  </section>
-	</main>
-
+      <h3>9. Contact Us</h3>
+      <p>
+        For privacy questions, concerns, or data requests, contact the
+        developer and personal information controller:
+      </p>
+      <p>
+        <strong>Three A Digital Solution</strong><br />
+        <strong>Contact:</strong> Ali Asghar Akmad<br />
+        <strong>Email:</strong>
+        <a href="mailto:ali.asghar.akmad@gmail.com">ali.asghar.akmad@gmail.com</a>
+      </p>
+    </section>
+  </main>
 
   <footer class="text-center py-4 mt-5 bg-light">
     <p class="mb-0">&copy; 2025 Badminton Buddy. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
